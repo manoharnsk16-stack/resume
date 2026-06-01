@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manohar Koralla — Director · Brand IP Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blk:#0B0B0B;
+  --lime:#D6FF4D;
+  --vio:#B388FF;
+  --amb:#FFBA65;
+  --cream:#F5F1E8;
+  --sans:'Instrument Sans',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+::selection{background:var(--lime);color:var(--blk);}
+
+body{
+  background:var(--blk);
+  color:var(--cream);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 0 0;}
+
+.hero-band{
+  background:var(--blk);
+  padding:3rem 2.5rem 2rem;
+  border-bottom:1px solid rgba(245,241,232,0.08);
+  position:relative;overflow:hidden;
+}
+
+.brand-pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.75rem;}
+.bpill{
+  font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
+  padding:5px 14px;border-radius:999px;border:1px solid rgba(245,241,232,0.2);
+  color:rgba(245,241,232,0.55);
+}
+.bpill.active{background:var(--lime);color:var(--blk);border-color:var(--lime);}
+
+.hero-name{
+  font-weight:800;
+  font-size:clamp(60px,12vw,100px);
+  line-height:0.88;letter-spacing:-0.05em;
+  color:var(--cream);
+}
+.hero-name .stroke{
+  -webkit-text-stroke:2px var(--cream);
+  color:transparent;display:block;
+}
+
+.hero-eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(245,241,232,0.45);margin-bottom:1.25rem;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{content:'';width:20px;height:1.5px;background:var(--lime);}
+
+.hero-tagline{
+  margin-top:1.5rem;
+  font-size:clamp(22px,3.5vw,32px);
+  font-weight:700;line-height:1.12;letter-spacing:-0.03em;
+  max-width:540px;
+}
+.hero-tagline .lime{color:var(--lime);}
+.hero-tagline .vio{color:var(--vio);}
+
+.hero-lede{
+  margin-top:1.25rem;font-size:14px;
+  color:rgba(245,241,232,0.6);line-height:1.7;max-width:540px;
+}
+.hero-lede em{font-style:normal;color:var(--cream);font-weight:600;}
+
+.contacts{
+  display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:1.5rem;
+  font-size:11.5px;font-weight:500;letter-spacing:0.04em;
+  color:rgba(245,241,232,0.42);
+}
+.contacts span{display:flex;align-items:center;gap:6px;}
+.contacts .ic{color:var(--lime);font-weight:700;}
+
+.stats-bar{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid rgba(245,241,232,0.08);
+  border-radius:10px;overflow:hidden;margin-top:2rem;
+}
+.sblock{
+  padding:16px 8px;text-align:center;
+  border-right:1px solid rgba(245,241,232,0.08);
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+}
+.sblock:last-child{border-right:none;}
+.sblock-n{
+  font-weight:800;font-size:clamp(24px,3vw,30px);
+  letter-spacing:-0.04em;line-height:1;color:var(--cream);
+}
+.sblock-n .acc{color:var(--lime);}
+.sblock-l{font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,241,232,0.3);margin-top:6px;line-height:1.4;}
+
+.body{padding:0 2.5rem;}
+
+.sec{margin-top:2.75rem;}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1.5rem;gap:16px;}
+.sec-ey{
+  font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(245,241,232,0.4);margin-bottom:10px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-ey::before{content:'';width:18px;height:1.5px;background:var(--lime);}
+.sec-title{
+  font-weight:800;font-size:clamp(26px,4vw,36px);
+  line-height:0.95;letter-spacing:-0.04em;color:var(--cream);
+}
+.sec-title em{font-style:normal;color:var(--lime);}
+.sec-count{font-size:10px;font-weight:500;color:rgba(245,241,232,0.3);letter-spacing:0.06em;white-space:nowrap;padding-bottom:4px;}
+
+.feat{
+  border:1px solid rgba(214,255,77,0.22);
+  border-radius:14px;padding:1.5rem;margin-bottom:12px;
+  background:rgba(214,255,77,0.04);position:relative;overflow:hidden;
+}
+.feat::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1.5px;
+  background:linear-gradient(90deg,transparent,var(--lime),transparent);opacity:0.5;
+}
+.live-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--lime);padding:4px 12px;
+  border:1px solid rgba(214,255,77,0.3);border-radius:999px;
+  background:rgba(214,255,77,0.1);margin-bottom:14px;
+}
+.live-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);}
+
+.entry-head{display:grid;grid-template-columns:1fr auto;gap:0 14px;align-items:start;}
+.eorg{font-weight:800;font-size:clamp(22px,3vw,28px);letter-spacing:-0.03em;line-height:1.1;color:var(--cream);}
+.eorg.sm{font-size:22px;}
+.erole{font-size:13px;color:rgba(245,241,232,0.5);margin-top:5px;font-weight:500;}
+.ewhen{font-size:10.5px;font-weight:500;color:rgba(245,241,232,0.4);text-align:right;white-space:nowrap;letter-spacing:0.03em;display:flex;flex-direction:column;gap:4px;padding-top:4px;}
+.ewhen .active-tag{color:var(--lime);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;}
+.ewhen .place{font-size:9.5px;color:rgba(245,241,232,0.25);}
+
+.bullets ul{list-style:none;padding:.9rem 0 .25rem;display:flex;flex-direction:column;gap:10px;}
+.bullets li{font-size:13.5px;color:rgba(245,241,232,0.72);line-height:1.65;padding-left:22px;position:relative;}
+.bullets li::before{content:'';position:absolute;left:0;top:11px;width:10px;height:1.5px;background:var(--lime);}
+.bullets li strong{font-weight:700;color:var(--cream);}
+.bullets li em{font-style:normal;color:var(--lime);font-weight:600;}
+
+.ip-row{margin-top:1rem;}
+.ip-row-label{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,241,232,0.25);margin-bottom:8px;}
+.ip-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.ipcard{background:rgba(245,241,232,0.04);border:1px solid rgba(245,241,232,0.1);border-radius:8px;padding:10px 13px;}
+.ipcard-brand{font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lime);margin-bottom:3px;}
+.ipcard-title{font-weight:700;font-size:15px;letter-spacing:-0.02em;color:var(--cream);line-height:1.2;}
+.ipcard-fmt{font-size:10px;color:rgba(245,241,232,0.3);margin-top:2px;font-weight:500;}
+
+.ecard{
+  border:1px solid rgba(245,241,232,0.08);border-radius:14px;
+  padding:1.25rem 1.5rem;margin-bottom:10px;
+  background:rgba(245,241,232,0.02);position:relative;overflow:hidden;
+}
+.ecard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(245,241,232,0.1),transparent);}
+
+.brand-roster{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(245,241,232,0.08);}
+.brand-roster-label{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,241,232,0.3);margin-bottom:10px;}
+.brand-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.btag{font-size:11px;font-weight:600;color:rgba(245,241,232,0.6);border:1px solid rgba(245,241,232,0.14);padding:5px 13px;border-radius:999px;letter-spacing:0.04em;}
+
+.prev-wrap{margin-top:2rem;border-top:1px solid rgba(245,241,232,0.08);padding-top:1.75rem;}
+.prev-label{font-size:9.5px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,241,232,0.25);margin-bottom:14px;}
+.prev-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:11px 0;border-bottom:1px solid rgba(245,241,232,0.06);align-items:baseline;}
+.prev-row:last-child{border-bottom:none;}
+.prev-co{font-weight:700;font-size:15px;letter-spacing:-0.02em;color:var(--cream);}
+.prev-role-t{font-size:12.5px;color:rgba(245,241,232,0.4);font-weight:500;margin-left:6px;}
+.prev-date{font-size:10px;font-weight:500;color:rgba(245,241,232,0.3);white-space:nowrap;text-align:right;}
+
+.film-list{display:flex;flex-direction:column;}
+.film-item{display:grid;grid-template-columns:1fr auto;gap:0 12px;padding:13px 0;border-bottom:1px solid rgba(245,241,232,0.07);align-items:center;}
+.film-item:last-child{border-bottom:none;}
+.film-name{font-weight:700;font-size:16px;letter-spacing:-0.025em;color:var(--cream);}
+.film-sub{font-size:10.5px;color:rgba(245,241,232,0.38);margin-top:3px;font-weight:500;letter-spacing:0.02em;}
+.fbadge{font-size:11px;font-weight:700;text-align:right;white-space:nowrap;}
+.fbadge.prize{color:var(--amb);}
+.fbadge.grow{color:var(--lime);}
+
+.books{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.bookcard{border:1px solid rgba(245,241,232,0.08);border-radius:12px;padding:16px 18px;position:relative;overflow:hidden;background:rgba(245,241,232,0.02);}
+.bookcard::before{content:'"';font-size:80px;font-weight:800;color:rgba(245,241,232,0.04);position:absolute;top:-10px;left:8px;line-height:1;}
+.book-t{font-weight:700;font-size:15px;letter-spacing:-0.02em;color:var(--cream);position:relative;}
+.book-s{font-size:11.5px;color:rgba(245,241,232,0.4);margin-top:4px;font-weight:500;position:relative;}
+
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.colcard{border:1px solid rgba(245,241,232,0.08);border-radius:14px;padding:1.25rem 1.5rem;position:relative;overflow:hidden;background:rgba(245,241,232,0.02);}
+.colcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(245,241,232,0.1),transparent);}
+.col-hd{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,241,232,0.35);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(245,241,232,0.07);}
+.compact{display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 0;border-bottom:1px solid rgba(245,241,232,0.06);align-items:baseline;}
+.compact:last-child{border-bottom:none;}
+.compact-lead{font-size:13.5px;font-weight:600;color:var(--cream);}
+.compact-sub{font-size:11.5px;color:rgba(245,241,232,0.4);margin-top:2px;font-weight:500;}
+.compact-r{font-size:10px;font-weight:500;color:rgba(245,241,232,0.28);text-align:right;white-space:nowrap;}
+
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.skill{font-size:10.5px;font-weight:600;color:rgba(245,241,232,0.55);border:1px solid rgba(245,241,232,0.12);padding:5px 13px;border-radius:999px;letter-spacing:0.04em;}
+
+.lang-section{margin-top:2.75rem;}
+.lang-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:1.25rem;}
+.lang-card{background:rgba(245,241,232,0.04);border:1px solid rgba(245,241,232,0.12);border-radius:10px;padding:18px 10px;text-align:center;}
+.lang-name{font-weight:700;font-size:15px;letter-spacing:-0.01em;color:var(--cream);}
+
+.cta-band{margin:3rem 0 0;padding:2.5rem 2.5rem 2rem;background:var(--lime);position:relative;overflow:hidden;}
+.cta-top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:8px;}
+.cta-top{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(0,0,0,0.4);}
+.cta-headline{font-weight:800;font-size:clamp(28px,5vw,46px);line-height:0.95;letter-spacing:-0.04em;color:var(--blk);max-width:500px;}
+.cta-headline .vio{color:var(--vio);}
+.cta-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;margin-top:2rem;border-top:1.5px solid rgba(0,0,0,0.1);padding-top:1.5rem;}
+.cta-meta-k{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(0,0,0,0.45);margin-bottom:6px;}
+.cta-meta-v{font-size:13px;font-weight:700;color:var(--blk);line-height:1.4;}
+.colophon{border-top:1.5px solid rgba(0,0,0,0.15);margin-top:1.5rem;padding-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.colophon-l{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(0,0,0,0.42);}
+.colophon-r{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(0,0,0,0.35);}
+
+@media print{
+  @page{size:A4;margin:0;}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .feat,.ecard,.colcard,.bookcard,.sec,.prev-wrap{page-break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero-band">
+    <div class="brand-pill-row">
+      <span class="bpill active">Direction</span>
+      <span class="bpill">Production</span>
+      <span class="bpill">Brand IP</span>
+      <span class="bpill">Cinema</span>
+    </div>
+    <div class="hero-eyebrow">Director · Filmmaker · Brand IP Strategist</div>
+    <div class="hero-name">MANOHAR<br><span class="stroke">KORALLA.</span></div>
+    <p class="hero-tagline">Culture moves fast.<br><span class="lime">We move with it.</span><br><span class="vio">Frame by frame.</span></p>
+    <p class="hero-lede">End-to-end creative ownership across <em>Coca-Cola</em>, <em>Thums Up</em>, <em>Vodafone Idea</em> and <em>Licious</em> at AEOS Labs. Directing award-winning short films. Building the next wave of India's visual culture — from brand campaigns to festival stages.</p>
+    <div class="contacts">
+      <span><span class="ic">T</span>8688691028</span>
+      <span><span class="ic">@</span>manoharnsk16@gmail.com</span>
+      <span><span class="ic">in</span>manohark777</span>
+      <span><span class="ic">◉</span>Bangalore, KA</span>
+    </div>
+    <div class="stats-bar">
+      <div class="sblock"><div class="sblock-n">5</div><div class="sblock-l">Brand IPs</div></div>
+      <div class="sblock"><div class="sblock-n">14<span class="acc">+</span></div><div class="sblock-l">Film Projects</div></div>
+      <div class="sblock"><div class="sblock-n">2</div><div class="sblock-l">Festival Awards</div></div>
+      <div class="sblock"><div class="sblock-n">2</div><div class="sblock-l">Books Published</div></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="sec">
+      <div class="sec-head">
+        <div><div class="sec-ey">Work Experience</div><div class="sec-title">Built across <em>frames.</em></div></div>
+        <div class="sec-count">3 active · 3 previously</div>
+      </div>
+
+      <div class="feat">
+        <div class="live-badge">Current Role · Live</div>
+        <div class="entry-head">
+          <div><div class="eorg">AEOS Labs</div><div class="erole">Content Strategist &amp; Brand IP Manager</div></div>
+          <div class="ewhen"><span>Jan 2026 — Present</span><span class="active-tag">Always On</span></div>
+        </div>
+        <div class="bullets"><ul>
+          <li><strong>End-to-end creative ownership</strong> across India's top national brand IPs — from strategic ideation through scripting, pre-production, shoot, and final delivery.</li>
+          <li>Simultaneously driving content pipelines for <em>five national campaigns</em> spanning FMCG, food, beverages, and Vodafone India's movie &amp; OTT category.</li>
+          <li>Owning creative direction, casting, content strategy, and quality oversight across all productions under the AEOS Labs umbrella.</li>
+        </ul></div>
+        <div class="ip-row">
+          <div class="ip-row-label">Brand IPs under management</div>
+          <div class="ip-grid">
+            <div class="ipcard"><div class="ipcard-brand">Coca-Cola · Thums Up</div><div class="ipcard-title">Toofani Biryani</div><div class="ipcard-fmt">Demo Film Series</div></div>
+            <div class="ipcard"><div class="ipcard-brand">Coca-Cola</div><div class="ipcard-title">Charged Pro</div></div>
+            <div class="ipcard"><div class="ipcard-brand">Licious</div><div class="ipcard-title">Sizzle Room</div></div>
+            <div class="ipcard"><div class="ipcard-brand">Vodafone Idea</div><div class="ipcard-title">Vitamin Pop</div></div>
+            <div class="ipcard"><div class="ipcard-brand">Indeed</div><div class="ipcard-title">Microseries</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <div class="entry-head">
+          <div><div class="eorg sm">Beco.India</div><div class="erole">AI Ad Strategist — Freelance</div></div>
+          <div class="ewhen"><span>2026</span><span class="place">Remote</span></div>
+        </div>
+        <div class="bullets"><ul>
+          <li>Developed AI-led advertising strategy for the sustainable consumer-goods brand — concepting, scripting, and creative direction for AI-generated ad films.</li>
+        </ul></div>
+      </div>
+
+      <div class="ecard">
+        <div class="entry-head">
+          <div><div class="eorg sm">Martymartin. Co</div><div class="erole">Production Operations Associate</div></div>
+          <div class="ewhen"><span>Dec 2024 – Feb 2025</span><span class="place">Bangalore</span></div>
+        </div>
+        <div class="bullets"><ul>
+          <li>Full production accountability — casting, creative direction, logistics, and end-to-end delivery for brand digital ad campaigns.</li>
+          <li>Partnered with brands to produce high-quality social media creative ads; improved marketing reach through tailored production approaches.</li>
+        </ul></div>
+        <div class="brand-roster">
+          <div class="brand-roster-label">Brands worked with</div>
+          <div class="brand-tags">
+            <span class="btag">Oro Money</span>
+            <span class="btag">Wint Wealth</span>
+            <span class="btag">Book Leaf Publications</span>
+            <span class="btag">Travenza</span>
+            <span class="btag">Scalar School of Business</span>
+            <span class="btag">XYXX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <div class="entry-head">
+          <div><div class="eorg sm">People Media Film Academy</div><div class="erole">Trainee Director — Direction Batch</div></div>
+          <div class="ewhen"><span>Apr – Sep 2025</span><span class="place">Bangalore</span></div>
+        </div>
+        <div class="bullets"><ul>
+          <li>6 months of intensive direction training — narrative structure, mise-en-scène, production workflow.</li>
+          <li>Wrote, directed, and produced an original short film; contributed across <em>12 projects</em> in acting, casting, AD, and lighting.</li>
+        </ul></div>
+      </div>
+
+      <div class="prev-wrap">
+        <div class="prev-label">Previously</div>
+        <div>
+          <div class="prev-row"><div><span class="prev-co">IRACE Ltd.<span class="prev-role-t">— Research Writing Assistant</span></span></div><div class="prev-date">Oct – Dec 2022</div></div>
+          <div class="prev-row"><div><span class="prev-co">IIM Skills<span class="prev-role-t">— Content Writing Intern · Delhi</span></span></div><div class="prev-date">Oct – Dec 2021</div></div>
+          <div class="prev-row"><div><span class="prev-co">Vestige Marketing<span class="prev-role-t">— Sales &amp; Marketing</span></span></div><div class="prev-date">Dec 2019 – Jun 2021</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">
+        <div><div class="sec-ey">Filmography</div><div class="sec-title">Scenes &amp; <em>screens.</em></div></div>
+        <div class="sec-count">5 works · 1 AD credit</div>
+      </div>
+      <div class="film-list">
+        <div class="film-item"><div><div class="film-name">Nanna Deshavu</div><div class="film-sub">Music Video · Assistant Director · Vijay Prakash</div></div><div class="fbadge grow">AD Credit</div></div>
+        <div class="film-item"><div><div class="film-name">The Last Page</div><div class="film-sub">Indie Short Film · YouTube · Feb 2025</div></div><div class="fbadge grow">Writer · Director</div></div>
+        <div class="film-item"><div><div class="film-name">The Writer's Dilemma</div><div class="film-sub">Short Film · YouTube · Oct 2025</div></div><div class="fbadge grow">Writer · Director</div></div>
+        <div class="film-item"><div><div class="film-name">Nanna Prayana</div><div class="film-sub">Short Film · Kannada · SSMRV College Fest</div></div><div class="fbadge prize">2nd Prize</div></div>
+        <div class="film-item"><div><div class="film-name">Society</div><div class="film-sub">Short Film · Kannada · BMS College Fest</div></div><div class="fbadge prize">3rd Prize</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head"><div><div class="sec-ey">Published Works</div><div class="sec-title">Words &amp; <em>worlds.</em></div></div></div>
+      <div class="books">
+        <div class="bookcard"><div class="book-t">"Self Love"</div><div class="book-s">Solo e-book · Personal development · Amazon</div></div>
+        <div class="bookcard"><div class="book-t">"Voice of Heart"</div><div class="book-s">Co-authored anthology · Love &amp; resilience</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">
+        <div><div class="sec-ey">Background</div><div class="sec-title">Receipts &amp; <em>résumé.</em></div></div>
+        <div class="sec-count">Education · Skills · Recognition</div>
+      </div>
+      <div class="twocol">
+        <div class="colcard">
+          <div class="col-hd">Education</div>
+          <div class="compact"><div><div class="compact-lead">Master of Business Administration</div><div class="compact-sub">Izee Institutions · Bangalore</div></div><div class="compact-r">2023–25</div></div>
+          <div class="compact"><div><div class="compact-lead">Bachelor of Business Administration</div><div class="compact-sub">Arihant Institute · Bangalore</div></div><div class="compact-r">2020–23</div></div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(245,241,232,0.07);">
+            <div class="col-hd" style="margin-bottom:10px;">Recognition</div>
+            <div class="compact"><div><div class="compact-lead">Public Speaking</div><div class="compact-sub">College festivals · Debate forums · Bangalore</div></div></div>
+            <div class="compact"><div><div class="compact-lead">Research Writing</div><div class="compact-sub">Challenges Faced by Startup Entrepreneurs · 2023</div></div></div>
+            <div class="compact"><div><div class="compact-lead">Sustainable Marketing</div><div class="compact-sub">MARKCON 2024 · Conference Paper</div></div></div>
+          </div>
+        </div>
+        <div class="colcard">
+          <div class="col-hd">Skills</div>
+          <div class="skills">
+            <span class="skill">Direction</span><span class="skill">Production</span><span class="skill">Scriptwriting</span>
+            <span class="skill">Brand IP Strategy</span><span class="skill">Creative Direction</span><span class="skill">Public Speaking</span>
+            <span class="skill">Research Writing</span><span class="skill">Digital Marketing</span><span class="skill">SEO &amp; SMM</span>
+            <span class="skill">Casting</span><span class="skill">Campaign Mgmt</span><span class="skill">Pre &amp; Post Production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lang-section">
+      <div class="sec-ey">Languages</div>
+      <div class="sec-title" style="font-size:clamp(26px,4vw,36px);">Spoken &amp; <em>written.</em></div>
+      <div class="lang-grid">
+        <div class="lang-card"><div class="lang-name">English</div></div>
+        <div class="lang-card"><div class="lang-name">Telugu</div></div>
+        <div class="lang-card"><div class="lang-name">Hindi</div></div>
+        <div class="lang-card"><div class="lang-name">Kannada</div></div>
+        <div class="lang-card"><div class="lang-name">Tamil</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-band">
+    <div class="cta-top-row"><div class="cta-top">Writing · Direction · Production · Culture First · Always On</div></div>
+    <div class="cta-headline">Writing.<br>Directing.<br><span class="vio">Producing.</span></div>
+    <div class="cta-grid">
+      <div><div class="cta-meta-k">Currently</div><div class="cta-meta-v">Brand IP Manager · AEOS Labs · Bangalore</div></div>
+      <div><div class="cta-meta-k">Email</div><div class="cta-meta-v">manoharnsk16@gmail.com</div></div>
+      <div><div class="cta-meta-k">Phone</div><div class="cta-meta-v">8688691028</div></div>
+    </div>
+    <div class="colophon">
+      <div class="colophon-l">Writing · Direction · Production · Brand IP · Cinema</div>
+      <div class="colophon-r">Manohar Koralla · 2026</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
